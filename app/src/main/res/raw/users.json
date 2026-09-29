@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Nguyễn Văn An",
+      "email": "an.nguyen@gmail.com",
+      "tel": "0901234567",
+      "description": "Lập trình viên Android nhiệt huyết.",
+      "avatar_url": "avatar_1",
+      "hobby": "Đọc sách, Chụp ảnh, Du lịch"
+    },
+    {
+      "id": 2,
+      "username": "Trần Thị Bích",
+      "email": "bich.tran@gmail.com",
+      "tel": "0902345678",
+      "description": "Nhà thiết kế UI/UX sáng tạo.",
+      "avatar_url": "avatar_2",
+      "hobby": "Vẽ tranh, Nghe nhạc, Nấu ăn"
+    },
+    {
+      "id": 3,
+      "username": "Lê Hoàng Cường",
+      "email": "cuong.le@gmail.com",
+      "tel": "0903456789",
+      "description": "Chuyên gia phân tích dữ liệu.",
+      "avatar_url": "avatar_3",
+      "hobby": "Chơi thể thao, Du lịch, Lập trình"
+    },
+    {
+      "id": 4,
+      "username": "Phạm Minh Dung",
+      "email": "dung.pham@gmail.com",
+      "tel": "0904567890",
+      "description": "Quản lý dự án phần mềm.",
+      "avatar_url": "avatar_4",
+      "hobby": "Bơi lội, Xem phim, Viết lách"
+    },
+    {
+      "id": 5,
+      "username": "Vũ Quốc Em",
+      "email": "em.vu@gmail.com",
+      "tel": "0905678901",
+      "description": "Kỹ sư kiểm thử phần mềm QA.",
+      "avatar_url": "avatar_5",
+      "hobby": "Chơi game, Cầu lông, Âm nhạc"
+    },
+    {
+      "id": 6,
+      "username": "Đặng Thanh Phong",
+      "email": "phong.dang@gmail.com",
+      "tel": "0906789012",
+      "description": "Lập trình viên Backend Node.js/Java.",
+      "avatar_url": "avatar_6",
+      "hobby": "Đá bóng, Chạy bộ, Du lịch"
+    },
+    {
+      "id": 7,
+      "username": "Bùi Thị Phương",
+      "email": "phuong.bui@gmail.com",
+      "tel": "0907890123",
+      "description": "Chuyên viên Marketing số.",
+      "avatar_url": "avatar_7",
+      "hobby": "Nấu ăn, Làm bánh, Chụp ảnh"
+    },
+    {
+      "id": 8,
+      "username": "Đỗ Văn Gia",
+      "email": "gia.do@gmail.com",
+      "tel": "0908901234",
+      "description": "Kiến trúc lợi giải phần mềm.",
+      "avatar_url": "avatar_8",
+      "hobby": "Đọc sách, Đánh cờ, Cầu lông"
+    },
+    {
+      "id": 9,
+      "username": "Hồ Thị Hoa",
+      "email": "hoa.ho@gmail.com",
+      "tel": "0909012345",
+      "description": "Chuyên viên tư vấn nhân sự.",
+      "avatar_url": "avatar_9",
+      "hobby": "Cắm hoa, Yoga, Nghe nhạc"
+    },
+    {
+      "id": 10,
+      "username": "Nông Văn Hùng",
+      "email": "hung.nong@gmail.com",
+      "tel": "0901122334",
+      "description": "Kỹ sư hệ thống Cloud DevOps.",
+      "avatar_url": "avatar_10",
+      "hobby": "Leo núi, Du lịch, Lập trình"
+    }
+  ]
+}

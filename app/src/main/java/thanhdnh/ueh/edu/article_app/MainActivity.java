@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     gridview = findViewById(R.id.gridview);
-    new UserData(getBaseContext(), gridview).loadData("https://raw.githubusercontent.com/thanhdnh/json/main/products.json", this);
+    new UserData(getBaseContext(), gridview).loadData("https://gist.githubusercontent.com/tranduyraison/070236ae6f997575f869d5e42d034d7b/raw/92e16f65a7a83961bec95388d9c3d9c231894c7a/gistfile1.json", this);
     gridview.setOnItemClickListener(onitemclick);
   }
 }
