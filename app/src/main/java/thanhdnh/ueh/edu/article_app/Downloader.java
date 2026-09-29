@@ -25,7 +25,7 @@ import okio.Okio;
 public class Downloader {
   public static String cached_file_path = "";
 
-  public static File downloadFile(String url, File cached) {
+  public static File downloadWithProgress(String url, File cached) {
     OkHttpClient client = new OkHttpClient();
     Request request = new Request.Builder().url(url).build();
 
@@ -45,6 +45,7 @@ public class Downloader {
     }
     return null;
   }
+
   public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView) {
     OkHttpClient client = new OkHttpClient();
     Request request = new Request.Builder().url(inputurl).build();
@@ -53,7 +54,9 @@ public class Downloader {
       @Override
       public void onFailure(Call call, IOException e) {
         mainHandler.post(() -> {
-          progressBar.setVisibility(ProgressBar.INVISIBLE);
+          if (progressBar != null) {
+            progressBar.setVisibility(ProgressBar.INVISIBLE);
+          }
         });
       }
 
@@ -77,15 +80,21 @@ public class Downloader {
           while ((bytesRead = inputStream.read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
             downloadedBytes += bytesRead;
-            int progress = (int) ((downloadedBytes * 100) / totalBytes);
-            mainHandler.post(() -> progressBar.setProgress(progress));
+            if (totalBytes > 0 && progressBar != null) {
+              int progress = (int) ((downloadedBytes * 100) / totalBytes);
+              mainHandler.post(() -> progressBar.setProgress(progress));
+            }
           }
           outputStream.flush();
 
           mainHandler.post(() -> {
             cached_file_path = where2store + "/downloaded_file" + extension;
-            imageView.setImageURI(Uri.parse(cached_file_path));
-            progressBar.setVisibility(ProgressBar.INVISIBLE);
+            if (imageView != null) {
+              imageView.setImageURI(Uri.parse(cached_file_path));
+            }
+            if (progressBar != null) {
+              progressBar.setVisibility(ProgressBar.INVISIBLE);
+            }
           });
         } catch (Exception e) {
           mainHandler.post(() -> {});
